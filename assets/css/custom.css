@@ -1,0 +1,59 @@
+/* style.css */
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.vid {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#myVideo {
+    position: fixed; /* Fixes the video to the viewport */
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Puts the video behind other content */
+    object-fit: cover; /* Ensures the video covers the entire area without distortion */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make content container full height to center things */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: aliceblue    ;
+}
+
+.content p {        
+    font-size: 1.2em;
+    max-width: 600px;
+    line-height: 1.6;
+    color: whitesmoke;
+}
+
